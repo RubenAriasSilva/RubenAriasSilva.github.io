@@ -1,0 +1,344 @@
+:root {
+    --color1: #191919;
+    --color2: #16423C;
+    --color3: #6A9C89;
+    --color4: #C4DAD2;
+    --color5: #E9EFEC;
+    --trasparent1: rgba(29, 204, 160, 0.179);
+    --trasparent2: rgba(0, 0, 0, 0.8);
+    --trasparent3: rgba(0, 0, 0, 0.4);
+}
+
+/*  Globales **/
+html {
+    font-size: 62.5%;
+    box-sizing: border-box; /* Hack para Box Model **/
+    scroll-snap-type: y mandatory;
+    font-family:monospace;
+}
+
+body {
+    font-family:monospace;
+    margin: 0;
+    padding: 0;
+    background-image: url('../img/img2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.header {
+    padding: 10px;
+    font-family:monospace;
+    font-size: 2.2rem;
+    display: block;
+    color: var(--color5);
+    margin-top: 1rem;
+    letter-spacing: 2px;
+    background-color: var(--trasparent1);
+    backdrop-filter: blur(15px);
+    text-align: left;
+    padding-left: 40px;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header span{
+    font-size: 2rem;
+    font-weight: 0; 
+}
+
+.navbar {
+    font-size: 20px;
+    padding: 1rem;
+    background-color: var(--trasparent1);
+    backdrop-filter: blur(15px);
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    margin-top: 88px;
+    padding-left: 40px !important;
+}
+
+.nav-link {
+    color: var(--color5) !important;
+    margin-left: 20px;
+    padding: 5px 15px !important;
+    border-radius: 20px;
+}
+
+.nav-link:hover {
+    background-color: var(--trasparent3);
+}
+
+.practicas {
+    margin-top: 0;
+    height: 250px;
+    padding-top: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.transparent {
+    backdrop-filter: blur(3px);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, var(--trasparent2), var(--trasparent3));
+    width: 600px;
+    padding: 15px;
+
+}
+
+.practicas h2{
+    font-size: 50px;
+    color: var(--color5);
+}
+
+.encabezado{
+    margin-top: 50px;
+    backdrop-filter: blur(3px);
+    background: linear-gradient(45deg, var(--trasparent1), var(--trasparent2));
+    width: 600px;
+    height: 100px;
+    padding: 28px;
+    border-radius: 0px 20px 20px 0px;
+}
+
+.encabezado h1{
+    font-size: 30px;
+    color: var(--color5);
+    text-align: end;
+}
+
+.main{
+    width: 100%;
+    height: 600px;
+}
+
+.ejemplo{
+    height: 220%;
+    width: 100%;
+    margin-top: 30px;
+    padding: 30px 190px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(3px);
+    background: linear-gradient(90deg, var(--trasparent1), var(--trasparent2), var(--trasparent2), var(--trasparent2), var(--trasparent2), var(--trasparent1));
+}
+
+.flexbox {
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    height: 100%;
+    width: 100%;
+}
+
+.flexbox1 {
+    background-color: var(--color3);
+    width: 400px;
+    height: 100%;
+    padding: 10px 20px;
+    font-family:monospace;
+}
+
+.flexbox1 h2{
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--color5);
+}
+
+.flexbox1 h3{
+    font-size: 20px;
+    text-align: justify;
+    color: var(--color5);
+}
+
+.fondo-foto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem auto;
+    background-color: transparent;
+    width: 200px;
+    height: 250px;
+    padding: 20px;
+}
+
+.foto {    
+    height: 100%;
+    margin: 0 auto;
+    border: 3px solid var(--trasparent3);
+}
+
+.account {
+    display: flex;
+    background-color: var(--trasparent3);
+    border-radius: 20px;
+    height: 50px;       
+    align-items: center;
+    margin: 20px 0;
+    padding: 2px;
+}
+
+.head-account {
+    width: 100%;
+    height: 100%;
+    color: var(--color5);
+    text-transform: uppercase;
+    font-size: 1.75rem;
+    text-align: center;
+}
+
+.account-content h4{
+    font-size: 20px;
+    color: var(--color5);
+}
+
+.lista{
+    color: var(--color5);
+}
+
+.margin {
+    margin-top: 5rem;
+}
+
+.grid-flex2 {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 5rem 84rem;
+    margin-left: 0.5rem;
+    gap: 0.5rem;  
+}
+
+.grid1 {
+    background-color: var(--color4);
+    color: var(--color2);
+    width: 5rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+.p-margin {
+    font-family: monospace;
+    font-weight: 0;
+    padding: 20px;
+}
+.p-summary {
+    color: white;
+    margin-top: 20px;
+    text-align: justify;
+}
+
+.grid2 {
+    border-width: 2.5px;
+    border-bottom: double;
+    border-bottom-color: white;
+    width: 95%;
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
+}
+
+.grid3 {
+    background: linear-gradient(135deg, var(--color4) 92%, transparent 8%);
+    color: var(--color2);
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    height: 100%;
+}
+
+.grid4 {
+    font-family: monospace;
+}
+
+.head-labels {
+    display: flex;
+    text-transform: uppercase;
+    transform: rotate(-90deg);
+    
+}
+.head-labels2 {
+    display: block;
+    text-transform: uppercase;
+    transform: rotate(-90deg); 
+    text-wrap: nowrap; 
+}
+
+.cucei {
+    height: 100px;
+    padding-top: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 20px;
+} 
+
+.fecha {
+    color: white;
+}
+
+.tres-elementos {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.element-1 {
+    color: white;
+    font-weight: bolder;
+    margin: 0;
+}
+
+.grid-cucei{
+    color: var(--color5);
+    width: 85%;
+    height: 170px;
+    margin: 3rem auto;
+    display: grid;
+    grid-template-columns: 3rem auto;
+    grid-template-rows: 10rem auto;
+    column-gap: 0.5rem;
+}
+
+.fcn{    
+    transform: rotate(-90deg); 
+    text-wrap: nowrap; 
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    height: 150px;
+}
+
+.contenido {
+    font-size: 18px;
+    text-align: justify; 
+    height: 150px;
+    margin-left: 20px;
+    margin-bottom: 50px;
+}
+
+.line-1 {
+    margin: 1rem 0;
+    font-size: 1.75rem;
+    display: flex;
+}
+
+.line-1 li {
+    margin: 0 1.5rem;
+}

@@ -1,0 +1,877 @@
+:root {
+    --color1: #191919;
+    --color2: #16423C;
+    --color3: #6A9C89;
+    --color4: #C4DAD2;
+    --color5: #E9EFEC;
+    --trasparent1: rgba(29, 204, 160, 0.179);
+    --trasparent2: rgba(0, 0, 0, 0.8);
+    --trasparent3: rgba(0, 0, 0, 0.4);
+}
+
+/*  Globales **/
+html {
+    font-size: 62.5%;
+    box-sizing: border-box; /* Hack para Box Model **/
+    scroll-snap-type: y mandatory;
+    font-family:monospace;
+}
+
+body {
+    font-family:monospace;
+    margin: 0;
+    padding: 0;
+    background-image: url('../img/img2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.header {
+    padding: 10px;
+    font-family:monospace;
+    font-size: 2.2rem;
+    display: block;
+    color: var(--color5);
+    margin-top: 1rem;
+    letter-spacing: 2px;
+    background-color: var(--trasparent1);
+    backdrop-filter: blur(15px);
+    text-align: left;
+    padding-left: 40px;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header span{
+    font-size: 2rem;
+    font-weight: 0; 
+}
+
+.navbar {
+    font-size: 20px;
+    padding: 1rem;
+    background-color: var(--trasparent1);
+    backdrop-filter: blur(15px);
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    margin-top: 88px;
+    padding-left: 40px !important;
+}
+
+.nav-link {
+    color: var(--color5) !important;
+    margin-left: 20px;
+    padding: 5px 15px !important;
+    border-radius: 20px;
+}
+
+.nav-link:hover {
+    background-color: var(--trasparent3);
+}
+
+.practicas {
+    margin-top: 0;
+    height: 250px;
+    padding-top: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.transparent {
+    backdrop-filter: blur(3px);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, var(--trasparent2), var(--trasparent3));
+    width: 600px;
+    padding: 15px;
+
+}
+
+.practicas h2{
+    font-size: 50px;
+    color: var(--color5);
+}
+
+.encabezado{
+    margin-top: 50px;
+    backdrop-filter: blur(3px);
+    background: linear-gradient(45deg, var(--trasparent1), var(--trasparent2));
+    width: 600px;
+    height: 100px;
+    padding: 28px;
+    border-radius: 0px 20px 20px 0px;
+}
+
+.encabezado h1{
+    font-size: 30px;
+    color: var(--color5);
+    text-align: end;
+}
+
+.main{
+    width: 100%;
+    height: 600px;
+}
+
+.ejemplo{
+    background: linear-gradient(90deg, var(--trasparent1), var(--trasparent2), var(--trasparent2), var(--trasparent2), var(--trasparent2), var(--trasparent1));
+    height: 100%;
+    width: 100%;
+    margin-top: 30px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ////////////////////////// Ejemplo 1 ////////////////////////// */
+
+.slider-container {
+    width: 700px;
+    margin: 0 auto;
+}
+  
+.slider-container .slider-viewport {
+    width: 700px;
+    border-radius: 10px;
+    display: flex;
+  
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+  
+.slider-container .slide {
+    min-width: 700px;
+    height: 400px;
+    scroll-snap-align: start;
+    border-radius: 10px;
+    box-sizing: border-box;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+}
+  
+.slider-container .slide:nth-child(1) {
+    background-color: rgb(250, 143, 114);
+}
+
+.slider-container .slide:nth-child(2) {
+    background-color: rgb(63, 147, 216);
+}
+
+.slider-container .slide:nth-child(3) {
+    background-color: rgb(127, 181, 19);
+}
+
+.slider-container .slide:nth-child(4) {
+    background-color: rgb(12, 181, 181);
+}
+  
+.slider-container .links {
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    font-size: 20px;
+}
+
+.slider-container .links a {
+    width: 40px;
+    height: 40px;
+    background-color: #2e2e2e;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+}
+
+.slider-container .links a:hover {
+    background-color: #226bbe;
+}
+
+/* ////////////////////////// Ejemplo 2 ////////////////////////// */
+
+.form-container {
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 80%;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 90%;
+    display: flex;
+    align-items: center;
+}
+
+.form-container .login-container {
+    width: 500px;
+    margin: 0 auto;
+}
+
+.form-container .login-container > h2 {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.form-container .login-container > p,
+.form-container .login-container > span{
+    text-align: center;
+    color: #555;
+}
+
+.form-container .login-container label{
+    display: block;
+    font-weight: bold;
+    padding: 5px 0;
+}
+
+.form-container .login-container input.input{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border: solid 1px #ccc;
+    border-radius: 5px;
+}
+
+.form-container .login-container input.input:focus{
+    outline: solid 2px #29faec;
+}
+
+.form-container .login-container .options{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-container a {
+    color: #128880;
+    text-decoration: none;
+}
+
+.form-container a:hover {
+    text-decoration: underline;
+}
+
+.form-container .login-container .providers{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.btn {
+    border: none;
+    padding: 15px 0;
+    width: 100%;
+    display: block;
+    border-radius: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.btn.btn-login {
+    background-color: black;
+    color: white;
+}
+
+.btn.btn-login:hover {
+    background-color: #444;
+}
+
+.form-container .login-container button.btn.google-provider {
+    background-color: white;
+    color: black;
+    border: solid 1px #ccc;
+}
+
+  .form-container .login-container button.btn.google-provider:hover {
+    background-color: rgb(212, 212, 212);
+    color: black;
+}
+
+.form-container .login-container button.btn.facebook-provider {
+    background-color: rgb(10, 82, 216);
+    color: white;
+    border: 0;
+}
+
+.form-container .login-container button.btn.facebook-provider:hover {
+    background-color: rgb(6, 61, 163);
+    color: white;
+}
+
+.form-container .login-container button.btn.twitter-provider {
+    background-color: rgb(10, 168, 216);
+    color: white;
+    border: 0;
+}
+
+.form-container .login-container button.btn.twitter-provider:hover {
+    background-color: rgb(7, 133, 172);
+    color: white;
+}
+
+
+.form-container .welcome-screen-container {
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 100%;
+    width: 50%;
+}
+
+/* ////////////////////////// Ejemplo 3 ////////////////////////// */
+
+.neon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+}
+
+.neon-button {
+    padding: 15px 40px;
+    font-size: 20px;
+    color: #fff;
+    background: none;
+    border: 2px solid #0ff; 
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    font-family: 'Arial', sans-serif;
+    text-transform: uppercase;
+}
+
+.neon-button:hover {
+    color: #0ff;
+    box-shadow: 0 0 20px #0ff, 0 0 40px #0ff, 0 0 60px #0ff;
+    transition: box-shadow 0.3s ease, color 0.3s ease;
+}
+
+.neon-button::before,
+.neon-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    box-shadow: 0 0 15px #0ff;
+    opacity: 0.6;
+    animation: neon-animation 2s infinite;
+    pointer-events: none;
+}
+
+.neon-button::after {
+    animation-delay: 1s;
+}
+
+@keyframes neon-animation {
+    0%, 100% {
+        box-shadow: 0 0 5px #0ff;
+    }
+    50% {
+        box-shadow: 0 0 20px #0ff;
+    }
+}
+
+/* ////////////////////////// Ejemplo 4 ////////////////////////// */
+
+.shiny-text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+}
+
+.shiny-text {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #fff;
+    position: relative;
+    text-transform: uppercase;
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 3px;
+    overflow: hidden;
+    line-height: 1.2;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+}
+
+.shiny-text::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%; 
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(108, 192, 159, 0.8), transparent);
+    animation: shine 2.5s infinite;
+}
+
+.shiny-text::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    animation: sparkle 1.5s infinite ease-in-out;
+}
+
+@keyframes shine {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+/* ////////////////////////// Ejemplo 5 ////////////////////////// */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: #1dcfa0;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.dropbtn:hover {
+    background-color: #15997a;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: large;
+    display: block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #0f6951;
+    color: white;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/* ////////////////////////// Ejemplo 6 ////////////////////////// */
+
+.search-bar {
+    border: solid 1px #ccc;
+    border-radius: 30px;
+  
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  
+    padding: 5px 10px;
+  
+    width: 700px;
+    margin: 100px auto;
+}
+
+.search-bar:focus-within {
+    border: solid 1px #aaa;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+  
+.search-bar input[type="text"] {
+    border: none;
+    outline: none;
+    flex: 1;
+    padding: 10px;
+    font-size: 18px;
+    background-color: transparent;
+    color: white;
+}
+  
+.search-bar .actions {
+    display: flex;
+    gap: 5px;
+}
+  
+.search-bar .actions button {
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    color: #999;
+}
+  
+.search-bar .actions button:hover {
+    color: #2979e2;
+}
+
+/* ////////////////////////// Ejemplo 7 ////////////////////////// */
+
+.cards {
+    display: flex;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+  }
+  
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+  
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+  
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+  
+.flip-card-front {
+    background-color: #bbb;
+    color: black;
+}
+  
+
+.flip-card-back {
+    background-color: var(--color3);
+    color: white;
+    transform: rotateY(180deg);
+}
+
+/* ////////////////////////// Ejemplo 8 ////////////////////////// */
+
+.chat-container {
+    width: 70%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    background-color: transparent;
+    box-sizing: border-box;
+    gap: 10px;
+    padding: 30px;
+    font-size: 24px;
+}
+
+.chat-container .bubble-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.chat-container .bubble-container.left {
+    width: 50%;
+    margin-right: auto;
+}
+.chat-container .bubble-container.right {
+    width: 50%;
+    margin-left: auto;
+    align-items: flex-end;
+}
+  
+.chat-container
+    .bubble-container.left
+    .bubble:nth-child(1)
+    .bubble-text
+    > div::before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    border-right: solid 5px #202c33;
+    border-top: solid 5px #202c33;
+    border-left: solid 5px transparent;
+    border-bottom: solid 5px transparent;
+    left: -9px;
+    top: 0;
+}
+
+.chat-container
+    .bubble-container.right
+    .bubble:nth-child(1)
+    .bubble-text
+    > div::before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    border-left: solid 5px #005c4b;
+    border-top: solid 5px #005c4b;
+    border-right: solid 5px transparent;
+    border-bottom: solid 5px transparent;
+    right: -8px;
+    top: 0;
+}
+
+.chat-container .bubble-container .bubble .bubble-text {
+    color: white;
+}
+  
+.chat-container .bubble-container.right .bubble .bubble-text > div {
+    position: relative;
+    background-color: #005c4b;
+}
+  
+.chat-container .bubble-container.left .bubble .bubble-text > div {
+    position: relative;
+    background-color: #202c33;
+}
+  
+.chat-container .bubble-container .bubble .bubble-text > div {
+    padding: 8px;
+    border-radius: 5px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.chat-container .bubble-container .bubble .bubble-text .bubble-info {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
+    padding: 5px 10px;
+    text-align: right;
+    width: 80px;
+}
+
+/* ////////////////////////// Ejemplo 9 ////////////////////////// */
+
+.material-icons {
+    font-family: "Material Icons";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: "liga";
+}
+
+.weather-container {
+    color: white;
+    font-size: 18px;
+    width: 450px;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 50px;
+}
+  
+.weather-container .current {
+    background: rgb(30, 107, 221);
+    background: linear-gradient(
+        0deg,
+        rgba(30, 107, 221, 1) 0%,
+        rgba(3, 116, 255, 1) 42%,
+        rgba(3, 191, 255, 1) 100%
+    );
+    border-radius: 40px;
+    padding: 40px;
+}
+
+.weather-container .current .city {
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.weather-container .current .day {
+    text-align: center;
+}
+  
+.weather-container .current .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+  
+.weather-container .current .row .info .temperature {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.weather-container .current .row .info .temperature .temperature-now {
+    font-size: 80px;
+    margin: 0;
+}
+
+.weather-container .current .row .info .temperature .temperature-low {
+    margin-left: -15px;
+    font-size: 32px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.weather-container .current .row .info .status {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.weather-container .current .more {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    gap: 10px;
+    text-align: center;
+}
+  
+.weather-container .current .more .item .icon span {
+    font-size: 28px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.weather-container .current .more .item .text {
+    font-weight: bold;
+}
+
+.weather-container .current .more .item .text .type {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* ////////////////////////// Ejemplo 10 ////////////////////////// */
+
+.checkboxTop{
+    display: flex;
+    flex-direction: column;
+}
+
+.checkbox-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: white;
+}
+  
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+  
+.checkmark {
+    position: absolute;
+    border-radius: 3px;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    transition: all 0.3s ease-in-out;
+}
+
+.checkmark.radio {
+    position: absolute;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.checkmark .material-icons {
+    color: white;
+    transform: scale(0);
+    transition: all 0.3s ease-in-out;
+}
+  
+.checkbox-container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+  
+.checkbox-container input:checked ~ .checkmark {
+    background-color: #53a6e9;
+}
+  
+.checkbox-container input:checked ~ .checkmark .material-icons {
+    transform: scale(1);
+}
+  
+.checkbox-container input:checked ~ .checkmark.radio .circle {
+    position: absolute;
+    border-radius: 50%;
+    top: 6px;
+    left: 7px;
+    height: 12px;
+    width: 12px;
+    background-color: #eee;
+    transition: all 0.3s ease-in-out;
+}
+  
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}

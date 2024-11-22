@@ -1,0 +1,292 @@
+:root {
+    --color1: #191919;
+    --color2: #16423C;
+    --color3: #6A9C89;
+    --color4: #C4DAD2;
+    --color5: #E9EFEC;
+    --trasparent1: rgba(29, 204, 160, 0.179);
+    --trasparent2: rgba(0, 0, 0, 0.8);
+    --trasparent3: rgba(0, 0, 0, 0.4);
+}
+
+/*  Globales **/
+html {
+    font-size: 62.5%;
+    box-sizing: border-box; /* Hack para Box Model **/
+    scroll-snap-type: y mandatory;
+    font-family:monospace;
+}
+
+body {
+    font-family:monospace;
+    margin: 0;
+    padding: 0;
+    background-image: url('../img/img2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.header {
+    padding: 10px;
+    font-family:monospace;
+    font-size: 2.2rem;
+    display: block;
+    color: var(--color5);
+    margin-top: 1rem;
+    letter-spacing: 2px;
+    background-color: var(--trasparent1);
+    backdrop-filter: blur(15px);
+    text-align: left;
+    padding-left: 40px;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header span{
+    font-size: 2rem;
+    font-weight: 0; 
+}
+
+.navbar {
+    font-size: 20px;
+    padding: 1rem;
+    background-color: var(--trasparent1);
+    backdrop-filter: blur(15px);
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    margin-top: 88px;
+    padding-left: 40px !important;
+}
+
+.nav-link {
+    color: var(--color5) !important;
+    margin-left: 20px;
+    padding: 5px 15px !important;
+    border-radius: 20px;
+}
+
+.nav-link:hover {
+    background-color: var(--trasparent3);
+}
+
+.practicas {
+    margin-top: 0;
+    height: 250px;
+    padding-top: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.transparent {
+    backdrop-filter: blur(3px);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, var(--trasparent2), var(--trasparent3));
+    width: 600px;
+    padding: 15px;
+}
+
+.practicas h2{
+    font-size: 50px;
+    color: var(--color5);
+}
+
+.encabezado{
+    margin-top: 50px;
+    backdrop-filter: blur(3px);
+    background: linear-gradient(45deg, var(--trasparent1), var(--trasparent2));
+    width: 600px;
+    height: 100px;
+    padding: 28px;
+    border-radius: 0px 20px 20px 0px;
+}
+
+.encabezado h1{
+    font-size: 30px;
+    color: var(--color5);
+    text-align: end;
+}
+
+.main{
+    width: 100%;
+    height: 600px;
+}
+
+.jsEjemplo{
+    background: linear-gradient(90deg, var(--trasparent1), var(--trasparent2), var(--trasparent2), var(--trasparent2), var(--trasparent2), var(--trasparent1));
+    height: 100%;
+    width: 100%;
+    margin-top: 30px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.contenedor {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 40px;
+}
+
+.contenedor-2 {
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+}
+
+.datos {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+    gap: 20px; /* Espacio entre columnas */
+    max-width: 800px; /* Ajusta el ancho máximo si es necesario */
+    margin: auto; /* Centra el grid */
+}
+
+.dato {
+    display: flex;
+    flex-direction: column; /* Coloca las etiquetas y campos en vertical */
+    gap: 5px; /* Espacio entre etiqueta y campo */
+}
+
+label {
+    font-weight: bold; /* Destaca las etiquetas */
+}
+
+.input-data {
+    padding: 8px;
+    border: 4px solid var(--trasparent1);
+    border-radius: 4px;
+    background-color: transparent;
+    color: var(--color3);
+}
+
+input{
+    padding: 1px;
+    font-size: 8px ;
+}
+  
+fieldset {
+    margin: 0 auto;
+    background-color: transparent;
+    width: 1200px;
+    border: none;
+    padding: 0 3.5rem;
+    padding-bottom: 3rem;
+}
+
+.head-2{
+    color: var(--color4);
+    text-align: center;
+    width: 1200px;
+    margin: 15px 0 15px 0;
+}
+
+.head-2 h2{
+    font-weight: 400;
+    font-size: 30px;
+    font-family:monospace;
+}
+  
+legend {
+    background-color: var(--trasparent1);
+    padding: 0.5rem 1.75rem;
+    text-align: right;
+    color: var(--color3);
+    font-weight: 600;
+    height: 30px;
+    width: 80%;
+    font-family:monospace;
+    display: flex;
+    flex-direction: column;
+}
+
+legend h3{
+    font-size: 25px;
+}
+  
+.input-data {
+    width: 200px;
+    height: 35px;
+    font-size: 1.75rem;
+    padding: 0 1rem;
+}
+  
+.datos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 1rem;
+}
+  
+label {
+    display: block;
+    color: var(--color3);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+  
+.contenedor-boton {
+    width: 90%;
+    max-width: 80rem;
+    margin: 3rem auto;
+    text-align: center;
+}
+.bor {
+    border-radius: 50%;
+}
+  
+.boton {
+    background-color: var(--trasparent3);
+    color: white;
+    text-transform: uppercase;
+    padding: 1.5rem 3rem;
+    border-radius: 1.5rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+  
+.boton:hover {
+    cursor: pointer;
+    background-color: var(--trasparent1);
+}
+  
+.temp {
+    width: 10%;
+    border-radius: 50%;
+}
+  
+.datos-temp {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    align-items: baseline;
+}
+  
+.resultado {
+    margin-top: 50px;
+    background-color: transparent;
+    border: 5px solid var(--trasparent1);
+    border-radius: 20px;
+    width: 1200px;
+    padding: 2rem;
+    text-align: right;
+}
+  
+.head-3 {
+    text-align: center;
+    color: var(--color3);
+    margin-bottom: 0;
+}  
